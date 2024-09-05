@@ -1,0 +1,10 @@
+name: setup-kmono
+description: Install kmono
+inputs:
+  version:
+    description: 'The version of kmono to install'
+    required: false
+    default: latest
+runs:
+  using: 'node20'
+  main: 'release/index.js'
