@@ -54,3 +54,5 @@ const tar_path = await tc.downloadTool(
 const extract_dir = await tc.extractTar(tar_path);
 
 core.addPath(extract_dir);
+
+core.info(`Setup kmono version ${version}`);
