@@ -16,9 +16,10 @@ const getVersion = async () => {
       accept: "application/json",
     },
   );
-  const data = await res.readBody();
+  const response = await res.readBody();
+  core.debug(response);
 
-  return JSON.parse(data).tag_name.replace("v", "");
+  return JSON.parse(response).tag_name.replace("v", "");
 };
 
 const getArch = () => {
